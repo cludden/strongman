@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/test/**/*.test.js"
+        ]
+      }
+    ],
+    "no-use-before-define": "off"
+  }
+}
