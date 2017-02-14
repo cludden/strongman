@@ -1,30 +1,43 @@
 {
-  "name": "bodybuilder2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "strongman",
+  "version": "0.0.0",
+  "description": "a node module for composing elasticsearch queries",
+  "main": "./dist/index.js",
   "scripts": {
+    "build": "rm -rf dist/* && babel lib -d dist",
+    "postversion": "npm run build",
+    "release": "npm run build && standard-version",
     "test": "mocha --compilers js:babel-register test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "elasticsearch",
+    "query",
+    "build",
+    "builder",
+    "compose",
+    "composer"
+  ],
+  "author": "chris ludden",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cludden/strongman"
+  },
   "dependencies": {
-    "bodybuilder": "^2.0.0",
-    "json-pretty": "0.0.1",
-    "lodash": "^4.17.4",
     "ramda": "^0.23.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-preset-latest": "^6.22.0",
     "babel-register": "^6.22.0",
     "chai": "^3.5.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "standard-version": "^4.0.0"
   }
 }

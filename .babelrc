@@ -3,7 +3,8 @@
     "latest"
   ],
   "plugins": [
-    "add-module-exports"
+    "add-module-exports",
+    "transform-object-rest-spread"
   ],
   "sourceMaps": "both"
 }
