@@ -3,7 +3,7 @@ import { describe, it } from 'mocha';
 
 import { terms } from '../lib';
 
-describe('term', function () {
+describe('terms', function () {
   it('handles generic', function () {
     const query = terms('colors', ['blue', 'green']).get();
     expect(query).to.deep.equal({
